@@ -1,0 +1,109 @@
+.home .full-adv-row.adv-flexi.hidden-xs.bodyTopAdd .adv-margin-bottom{margin-bottom: 0px;}
+.home .full-adv-row {
+    margin: 0px 0px;
+}
+figure.op-tracker{display: none;}
+.home .siteWrapper {
+/*    margin-top: 200px;
+*/}
+.logged-in .siteWrapper {
+    margin-top: 200px;
+}
+.logged-in header{top: 32px;}
+.adv-margin-bottom:last-child{margin-top: 10px;}
+.drawer-overlay .adv-margin-bottom {
+    margin: 0px;
+margin-bottom:15px;
+}
+.single .full-adv-row {
+    margin: 0px;
+}
+.at-mobile.at4-jumboshare .at4-share-container {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 6px;
+    width: 200px;
+}
+.at-mobile.at4-jumboshare .at4-count-container{max-width: 70px!important;}
+@media (max-width: 767px){
+	.logged-in .siteWrapper {
+    margin-top: 71px;
+}
+}
+
+#rashifal .item {
+    display: inline-table;
+    width: 30%;
+    padding-right: 2%;
+    border: 1px solid #4CAF50;
+    margin: 10px;
+    padding: 5px 5px 5px 15px;
+}
+
+div#imagetoload3 {
+    background: url(http://www.khabardabali.com/rashifal/ico_2.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload4 {
+    background: url(http://www.khabardabali.com/rashifal/ico_3.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload5 {
+    background: url(http://www.khabardabali.com/rashifal/ico_4.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload6 {
+    background: url(http://www.khabardabali.com/rashifal/ico_5.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload7 {
+    background: url(http://www.khabardabali.com/rashifal/ico_6.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload8 {
+    background: url(http://www.khabardabali.com/rashifal/ico_7.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload9 {
+    background: url(http://www.khabardabali.com/rashifal/ico_8.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload10 {
+    background: url(http://www.khabardabali.com/rashifal/ico_9.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload11 {
+    background: url(http://www.khabardabali.com/rashifal/ico_10.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload12 {
+    background: url(http://www.khabardabali.com/rashifal/ico_11.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload13 {
+    background: url(http://www.khabardabali.com/rashifal/ico_12.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}div#imagetoload14 {
+    background: url(http://www.khabardabali.com/rashifal/ico_13.png);
+    width: 140px;
+    height: 120px;
+    float: right;
+}
+.nws-post-category.bicharhomepage {
+    background: #fff;
+}
+.rightsidebar a.padding10 img {
+    padding-bottom: 10px;
+}

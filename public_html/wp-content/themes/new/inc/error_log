@@ -1,0 +1,2 @@
+[04-Dec-2018 16:00:24 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/pmstnepal/public_html/wp-content/themes/new/inc/customizer.php on line 70
+[13-Dec-2018 23:37:46 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/pmstnepal/public_html/wp-content/themes/new/inc/template-tags.php on line 170

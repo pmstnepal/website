@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){jQuery(".wpt5ss_colorField").wpColorPicker();jQuery("#wpt5ss_theme").on("change",function(){var e=jQuery(this).val();if(e=="custom"){jQuery("#wpt5ss_custom").fadeIn()}else{jQuery("#wpt5ss_custom").hide()}}).change()})

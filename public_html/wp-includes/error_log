@@ -1,0 +1,26 @@
+[19-Aug-2020 05:41:25 UTC] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[19-Aug-2020 05:41:25 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[19-Aug-2020 05:41:27 UTC] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[19-Aug-2020 05:41:27 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[19-Aug-2020 05:41:34 UTC] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[19-Aug-2020 05:41:34 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[17-Sep-2020 18:28:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/pmstnepal/public_html/wp-includes/locale.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/pmstnepal/public_html/wp-includes/locale.php on line 11
+[18-Sep-2020 22:39:22 UTC] PHP Fatal error:  Class 'Walker' not found in /home/pmstnepal/public_html/wp-includes/class-walker-nav-menu.php on line 17
+[02-Oct-2020 15:52:19 UTC] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[02-Oct-2020 15:52:19 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[21-Oct-2020 00:45:17 UTC] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[21-Oct-2020 00:45:17 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[23-Dec-2020 15:04:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/pmstnepal/public_html/wp-includes/class-oembed.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/pmstnepal/public_html/wp-includes/class-oembed.php on line 12
+[08-Feb-2021 04:26:29 UTC] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[08-Feb-2021 04:26:29 UTC] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php71/root/usr/share/pear') in /home/pmstnepal/public_html/wp-includes/functions.php on line 8
+[15-Jul-2021 04:18:18 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/pmstnepal/public_html/wp-includes/locale.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/pmstnepal/public_html/wp-includes/locale.php on line 11
+[16-Jul-2021 00:09:55 UTC] PHP Fatal error:  Class 'Walker' not found in /home/pmstnepal/public_html/wp-includes/class-walker-nav-menu.php on line 17
