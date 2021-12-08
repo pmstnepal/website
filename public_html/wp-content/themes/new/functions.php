@@ -938,41 +938,72 @@ if ( ! class_exists( 'ContentDetails' ) )
 	}
 }
 
+/********Pagination*******************/
+function pmst_pagination()
+{
+    $output_html = '';
+    if (is_singular()) {
+        return;
+    }
+    global $wp_query;
+    /** Stop execution if there's only 1 page */
+    if ($wp_query->max_num_pages <= 1) {
+        return;
+    }
+    $paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
+    $max = intval($wp_query->max_num_pages);
+    /**    Add current page to the array */
+    if ($paged >= 1) {
+        $links[] = $paged;
+    }
+    /**    Add the pages around the current page to the array */
+    if ($paged >= 4) {
+        $links[] = $paged - 1;
+        $links[] = $paged - 2;
+        $links[] = $paged - 3;
+    }
 
-function pagination($pages = '', $range = 4)
-{  
-     global $paged;
-	 $currentpage=get_query_var('paged');
-     if(empty($paged)) $paged = 1;
-     if($pages == '')
-     {
-         global $wp_query;
-         $pages = $wp_query->max_num_pages;
-         if(!$pages)
-         {
-             $pages = 1;
-         }
-     }   
-     if(1 != $pages)
-     {
-				if($paged = 1) echo "<li><a href='".get_pagenum_link($paged - 1)."'>«</a></li>";
-				for ($i=1; $i <= $pages; $i++)
-				{
-					if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
-					{
-					if($currentpage==$i)
-						$active="class='active'";
-						else
-						$active="";
-					if($currentpage=="" || $currentpage==1)
-					   $activefirst="class='active'";
-					   else
-					   $activefirst="";	
-						echo ($paged == $i)? "<li $activefirst><a href='".get_pagenum_link()."'>".$i."</a></li>":"<li $active><a href='".get_pagenum_link($i)."'>".$i."</a></li>";
-					}
-				}
-				if ($paged < $pages) echo "<li><a href='".get_pagenum_link($pages)."'>»</a></li>";
-     }
+    if (($paged + 3) <= $max) {
+        $links[] = $paged + 3;
+        $links[] = $paged + 2;
+        $links[] = $paged + 1;
+    }
+    echo '<div class="pagination-list"><ul class="pagination">';
+    /**    Previous Post Link */
+    if (get_previous_posts_link()) {
+        printf('<li>%s</li>' . "\n", get_previous_posts_link('«'));
+    }
+
+    /**    Link to first page, plus ellipses if necessary */
+    if (!in_array(1, $links)) {
+        $class = 1 == $paged ? ' class="active"' : '';
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link(1)), '1');
+        if (!in_array(2, $links)) {
+            printf('<li>%s</li>' . "\n", '<a href="#">…</a>');
+        }
+    }
+    /**    Link to current page, plus 2 pages in either direction if necessary */
+    sort($links);
+    foreach ((array)$links as $link) {
+        $class = $paged == $link ? ' class="active"' : '';
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($link)), $link);
+
+    }
+
+    /**    Link to last page, plus ellipses if necessary */
+    if (!in_array($max, $links)) {
+        if (!in_array($max - 1, $links)) {
+            echo '<li><a href="#">…</a></li>' . "\n";
+        }
+        $class = $paged == $max ? ' class="active"' : '';
+        printf('<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url(get_pagenum_link($max)), $max);
+    }
+
+    /**    Next Post Link */
+    if (get_next_posts_link()) {
+        printf('<li>%s</li>' . "\n", get_next_posts_link('»'));
+    }
+    echo '</ul></div>' . "\n";
 }
 /********end*******************/
  
@@ -1526,21 +1557,7 @@ function the_content_limit($max_char, $more_link_text = ' ', $stripteaser = 0, $
 
     $content = strip_tags($content);
 
-    if (strlen($_GET['p']) > 0) {
-
-        //echo "<p>";
-
-        echo $content;
-
-        echo "&nbsp;<a href='";
-
-        the_permalink();
-
-        echo "'>" . "..</a>";
-
-        //echo "</p>";
-
-    } else if ((strlen($content) > $max_char) && ($espacio = strpos($content, " ", $max_char))) {
+    if ((strlen($content) > $max_char) && ($espacio = strpos($content, " ", $max_char))) {
 
         $content = substr($content, 0, $espacio);
 
@@ -1594,3 +1611,4 @@ function my_mime_types($mime_types){
     return $mime_types;
 }
 add_filter('upload_mimes', 'my_mime_types', 1, 1);
+
