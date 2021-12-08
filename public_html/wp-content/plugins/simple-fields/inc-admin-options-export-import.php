@@ -27,11 +27,11 @@ class simple_fields_options_page_import_export {
 		add_action("simple_fields_settings_admin_head", array($this, "output_scripts_and_styles"));
 		add_action("wp_ajax_simple_fields_get_export", array($this, "ajax_get_export") );
 
-		//add_action("admin_init", array($this, "maybe_do_import"));
+		add_action("admin_init", array($this, "maybe_do_import"));
 
 	}
 
-	/*function maybe_do_import() {
+	function maybe_do_import() {
 		
 		if ( isset($_POST) && isset( $_POST["action"] ) && ( $_POST["action"] === "simple_fields_do_import" ) ) {
 			
@@ -61,7 +61,12 @@ class simple_fields_options_page_import_export {
 			$arr_post_connectors = isset($arr_import["post_connectors"]) ? (array) $arr_import["post_connectors"] : array();
 
 			$import_type = $_POST["simple-fields-import-type"];
-			
+			/*
+			$import_type:
+			replace
+			overwrite-append
+			append-new
+			*/
 			#sf_d( $arr_import, '$arr_import');
 			
 			if ( "replace" === $import_type) {
@@ -91,7 +96,7 @@ class simple_fields_options_page_import_export {
 			exit;
 
 		}
-	}*/
+	}
 
 	/**
 	 * Get name of this options page tab

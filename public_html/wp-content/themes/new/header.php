@@ -39,6 +39,34 @@ global $pn_options;
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <script src="//platform-api.sharethis.com/js/sharethis.js#property=5b24de6fd4efc40011702dfb&product=inline-share-buttons"></script>
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "154662858062441");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -51,17 +79,9 @@ global $pn_options;
   
 </script>
 
-<!--Start of Zendesk Chat Script-->
-<script type="text/javascript">
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-$.src="https://v2.zopim.com/?5wTqgRtDX1odFSiBl52bNcfpGx3d1pCZ";z.t=+new Date;$.
-type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
-</script>
-<!--End of Zendesk Chat Script-->
-<script data-ad-client="ca-pub-8768534328781288" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
+<script asyn src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?
+client=ca-pub-8768534328781288"
+	crossorigin="anonymous"></script>
    
 </head>
 <body class="home blog drawer drawer-left drawer-navbar drawer-static" >
@@ -85,13 +105,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
         </div>
         <div class="col-xs-12 col-sm-6 offset-padd-0">
             <div class="search-wrap">
-                <form method="get" id="searchform" action="http://www.khabardabali.com/">
-                    <input type="text" class="text" name="s" id="s" value=""
-                           onfocus="if(this.value==this.defaultValue)this.value='';"
-                           onblur="if(this.value=='')this.value=this.defaultValue;" maxlength="150"
-                           placeholder="Search..."/>
-                    <input type="submit" id="searchsubmit" value="" class="button search-icon"/>
-                </form>
+                
             </div>
             <div class="date"><span><?= EngToNep::convertTime(time(), false); ?></span>&nbsp;&nbsp;/&nbsp;&nbsp;<span><b><?php echo date('F jS, Y') ?></b></span>
             </div>
@@ -148,9 +162,12 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
             </li>
             <li class="drawer-menu-item dropdown active">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
-            </li>
+           </li>
             <?php wp_nav_menu_top( array( 'theme_location' => 'mainmenu','items_wrap' =>'%3$s','container'=>'') );?>
+
+
         </ul>
+
     <div class="drawer-footer"><span></span></div>
     </nav>
     </div>

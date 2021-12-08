@@ -53,7 +53,7 @@ global $pn_options;
                             </p>
                             <h5>Email:</h5>
                             <p><a href="mailto:<?php echo $pn_options['primary-email']; ?>"><?php echo $pn_options['primary-email']; ?></a></p>
-                            <p><a href="mailto:info@pmstnepal.com">info@pmstnepal.com</a></p>
+                            <p><a href="mailto:info@pmstnepal.com.np">info@pmstnepal.com.np</a></p>
                             <p>Facebook ID:<a href="<?php echo $pn_options['social-link-facebook']; ?>" target="_blank"><?php echo $pn_options['social-link-facebook']; ?></a></p>
                         </li>
                     </ul>
@@ -79,7 +79,7 @@ global $pn_options;
                 <div class="col-sm-6">
                     <div class="ft-info">
                         <p>Copyright ©2013-2021 <?php echo get_bloginfo( 'name' ); ?>. All rights reserved.</p>
-                        <div>Website by: <a href="http://www.pmstnepal.com" target="_blank">PMST Nepal</a></div>
+                        <div>Website by: <a href="http://www.pmstnepal.com.np" target="_blank">PMST Nepal</a></div>
                     </div>
                 </div>
             </div>

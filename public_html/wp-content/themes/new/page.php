@@ -11,7 +11,7 @@
  * @since Twenty Fifteen 1.0
  */
 
-get_header(); ?>
+get_header(); ?><br><br>
 <div class="siteWrapper">
 <div class="bodyWrapper container">
 <div class="drawer-overlay">
@@ -50,7 +50,7 @@ get_header(); ?>
                     <div class="cat-block">
                     <?php if(!empty($thumb_url))  :?>
                     <div class="cat-image">
-                    <img src="<?=bfi_thumb($thumb_url,$image_size); ?>" class="img-responsive" title="<?php echo $alt['title']; ?>" alt="<?php echo $alt['alt']; ?>" />
+                    <img src="<?=$thumb_url; ?>" class="img-responsive" title="<?php echo $alt['title']; ?>" alt="<?php echo $alt['alt']; ?>" />
                     </div>
                     <?php endif; ?>
                     <div class="nws-cat-content">
@@ -93,39 +93,6 @@ get_header(); ?>
          <div class="col-sm-12 col-md-4 col-lg-4 rightsidebar">
  			<?php include(TEMPLATEPATH. '/sidebar.php'); ?>
             </div>
-        <!--/*----------------------------*/--> 
-      </div>
-<?php } elseif(is_shop() || is_cart() || is_checkout() || is_account_page()) { ?>
-
-<div class="row-section row">
-        <!-------------------- Your top main-left part ----------------------->
-        <div class="col-sm-12 col-md-12">
-          <div class="leftSection">
-          <div class="category-Section">
-              <div class="cat-heading-panel">
-           <div id="post-<?php the_ID(); ?>" class="post">
-            <h3 class="posttitle">
-            <?php 
-            $page_id = get_queried_object_id();
-            echo get_the_title( $page_id );
-            ?>
-            </h3>
-            </div>
-            </div>
-              <div class="list-category clearfix">
-                  <div class="social-sharing-links clearfix"><div class="sharethis-inline-share-buttons"></div></div>
-                <?php
-                while (have_posts()) : the_post();
-                $custom = get_post_custom($post->ID);
-                ?>
-                     
-                   <?php echo the_content(); ?>
-                   
-                    <?php endwhile; ?>
-            </div>
-          </div>
-        </div>
-        </div>
         <!--/*----------------------------*/--> 
       </div>
 <?php } else { ?>

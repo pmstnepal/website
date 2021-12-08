@@ -6,6 +6,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 global $post;
 $post_id      = get_the_id();
 if(get_post_type()=='gallery') {
@@ -23,26 +24,29 @@ $terms        = get_the_terms( $post_id , 'category', 'string');
 $cname		= $terms[0]->name;
 }
 get_header(); ?>
+
 <div class="siteWrapper">
 <div class="bodyWrapper container">
             <div class="drawer-overlay">
 	          <div class="main-container" data-sticky-sidebar-container>
-               <?php if(is_product()) { ?>
-			   <?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-			        <div class="row-section row">
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                             <div class="detail-Section">
-                            <div class="heading-panel">
-                            <h1 class="extraBigposttitle"><?php the_title(); ?></h1></div>
-                		<?php the_content(); ?>
-                		</div>
-                		</div>
-                	</div>
-               <?php endwhile; ?>
-               <?php endif; ?>
-               <?php } else { ?>
                 <div class="row-section row">
+
                     <div class="col-sm-12 col-md-8 col-lg-9">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8768534328781288"
+     crossorigin="anonymous"></script>
+<!-- ads1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8768534328781288"
+     data-ad-slot="6811674647"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
                         <div class="leftSection">
 							<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
                             $this_page_category = get_the_category( $post->ID );
@@ -54,21 +58,21 @@ get_header(); ?>
                             <!--Start: Other Normal Post>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-->
                             <div class="detail-Section">
                             <div class="heading-panel">
+
                             <h1 class="extraBigposttitle"><?php the_title(); ?></h1></div>
+
+
                             <div class="social-sharing-links clearfix"><div class="sharethis-inline-share-buttons"></div></div>
-                            <div style="margin-bottom:5px;">
-                             ADD SPACE
-                                </div>
                             <div class="detail-prefericenes">
                                 <ul class="flex detailPrefe">
                                     <li><div class="postFooter">
-													<?php if ( $custom1['npauthor'][0] != "" ) { ?>
+													<!--<?php if ( $custom1['npauthor'][0] != "" ) { ?>
 														<span class="npauthor"><?php echo $custom1['npauthor'][0]; ?></span>
 													<?php } elseif($author) { ?>
                                                     <?php echo $author; ?>
                                                     <?php } else { ?>
                                                     Pmstnepal
-                                                    <?php } ?>
+                                                    <?php } ?>-->
 												</div></li>
                                     <li><div class="publishedHrs"><?php echo get_the_date(); ?></div></li>
                                     <?php if(get_post_type()=='video' || get_post_type()=='gallery') { ?>
@@ -93,23 +97,38 @@ get_header(); ?>
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                     <?php the_content(); ?>
                                     </div>
-                                    </div>	
+                                    </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8768534328781288"
+     crossorigin="anonymous"></script>
+<!-- ads1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8768534328781288"
+     data-ad-slot="6811674647"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	
                                     <div class="pub-date">
                                     <font style="font-style: italic;"><?php echo get_the_date(); ?>  Published</font>
                                     </div>
                                     <div class="linermaker"></div>
                                     </div>
                                     <div class="spacer"></div>
-                                    <h2 class="posttitle color-light">Comments:</h2>
+
+ 	                            <h2 class="posttitle color-light">Comments:</h2>
                                     <!--facebook comment box -->
                                     <!-- Facebook Comments Plugin for WordPress: http://peadig.com/wordpress-plugins/facebook-comments/ -->
-                                       <?php //echo do_shortcode('[fbcomments url="" width="848" count="off" num="5" countmsg="wonderful comments!"]'); ?>									
+                                    
+<?php //echo do_shortcode('[fbcomments url="" width="848" count="off" num="5" countmsg="wonderful comments!"]'); ?>								
 									<?php echo do_shortcode('[fbcomments]');?>
-                                    <!-- end here -->
+                                    <!-- end here --> 
                                     <div class="spacer"></div>
-                                  
+                                    
                                     <div class="pmst-nws-post">
-                                        <?php
+                                       <!-- <?php
 													remove_all_filters('posts_orderby');
 													if(get_post_type()=='gallery') {
 														$args= array(
@@ -165,9 +184,11 @@ get_header(); ?>
 													}
 													$my_query    = null;
 													$my_query    = new WP_Query( $args );
-													?>
+													?> -->
                                    <?php if($my_query->found_posts>5) { ?> <div class="postName">
                                     <span>Related <?php echo $cname; ?> :</span>
+
+
                                     </div><?php } ?>
                                     <div class="row">
                                         <?php
@@ -209,25 +230,19 @@ get_header(); ?>
                                     <!--End: Other Normal Post<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
                             <?php endwhile; ?>
                             <?php endif; ?>
-                            <div id="contentad544267"></div>
-<script type="text/javascript">
-    (function(d) {
-        var params =
-        {
-            id: "bee8e2e6-9c49-4d48-a3d4-17236f72cf2c",
-            d: "cG1zdG5lcGFsLmNvbQ==",
-            wid: "544267",
-            cb: (new Date()).getTime()
-        };
-        var qs = Object.keys(params).reduce(function(a, k){ a.push(k + '=' + encodeURIComponent(params[k])); return a},[]).join(String.fromCharCode(38));
-        var s = d.createElement('script'); s.type='text/javascript';s.async=true;
-        var p = 'https:' == document.location.protocol ? 'https' : 'http';
-        s.src = p + "://api.content-ad.net/Scripts/widget2.aspx?" + qs;
-        d.getElementById("contentad544267").appendChild(s);
-    })(document);
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8768534328781288"
+     crossorigin="anonymous"></script>
+<!-- ads1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8768534328781288"
+     data-ad-slot="6811674647"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-                    
-                            ADD SPACE
+                           
                                 </div>
                            
 				</div>
@@ -236,11 +251,11 @@ get_header(); ?>
                 <div class="col-sm-12 col-md-4 col-lg-3 rightsidebar">
                 <?php include( TEMPLATEPATH . '/sidebar.php' ); ?>
                 </div>		
-                <?php } ?>
     </div>
     </div>
     </div>
     <!-- End Main Body -->
   </div>
 </div>
+
 <?php get_footer(); ?>

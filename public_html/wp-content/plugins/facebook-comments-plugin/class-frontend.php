@@ -1,3 +1,4 @@
+
 <?php
 
 //ADD XFBML
@@ -126,7 +127,7 @@ function fbcommentshortcode($fbatts) {
 			}
 			$commentcount .= "<fb:comments-count href=".$url."></fb:comments-count> ".$fbcomments['countmsg']."</p>";
 		}
-		if ($fbcomments['title'] != '') {
+		if (isset($fbcomments['title']) && $fbcomments['title'] != '') {
 			if ($fbcomments['titleclass'] == '') {
 				$commenttitle = "<h5>";
 			} else {
@@ -137,7 +138,7 @@ function fbcommentshortcode($fbatts) {
 		if (!isset($commentcount)) {$commentcount = "";}
 		$fbcommentbox = "<!-- Facebook Comments Plugin for WordPress: http://peadig.com/wordpress-plugins/facebook-comments/ -->".$commenttitle.$commentcount;
 
-      	if ($fbcomments['html5'] == 'on') {
+      	if (isset($fbcomments['html5']) && $fbcomments['html5'] == 'on') {
 			$fbcommentbox .=	"<div class=\"fb-comments\" data-href=\"".$url."\" data-numposts=\"".$fbcomments['num']."\" data-width=\"".$fbcomments['width']."\" data-colorscheme=\"".$fbcomments['scheme']."\"></div>";
 
     } else {
@@ -154,3 +155,4 @@ add_shortcode('fbcomments', 'fbcommentshortcode');
 
 
 ?>
+

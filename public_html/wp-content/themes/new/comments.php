@@ -55,4 +55,4 @@ if ( post_password_required() ) {
 
 	<?php comment_form(); ?>
 
-</div><!-- .comments-area -->
+</div><!-- .comments-area
