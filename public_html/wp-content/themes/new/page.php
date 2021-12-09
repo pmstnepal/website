@@ -76,13 +76,11 @@ get_header(); ?><br><br>
             <?php endif; ?>
             </div>
               <div class="paginate-panel">
-				<?php 
-                if (function_exists("pagination")) {
-                echo  "<ul class=\"pagination\">";
-                pagination($total_pages);
-                echo "</ul>";
-                } 
-                wp_reset_query();
+				    <?php 
+                   if (function_exists("pmst_pagination")) {                 
+                    pmst_pagination();                 
+                    } 
+                    wp_reset_query();
                 ?>
         		</div>
           </div>
